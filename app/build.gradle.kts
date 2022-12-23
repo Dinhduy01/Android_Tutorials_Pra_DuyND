@@ -170,7 +170,9 @@ dependencies {
     implementation(Deps.appcompat)
     implementation(Deps.material)
     implementation(Deps.constraint_layout)
-
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation ("androidx.core:core-ktx:1.6.0")
     testImplementation(Deps.junit)
     testImplementation(Deps.mockk)
 }
