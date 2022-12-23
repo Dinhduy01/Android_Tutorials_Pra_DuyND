@@ -25,7 +25,7 @@ object Versions {
 object AppConfigs {
     const val application_id = "com.sun.structure_android"
     const val compile_sdk_version = 31
-    const val min_sdk_version = 23
+    const val min_sdk_version = 26
     const val target_sdk_version = 30 // improve later
     const val version_code = 1
     const val version_name = "1.0"
