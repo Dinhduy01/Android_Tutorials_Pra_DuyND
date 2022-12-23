@@ -8,24 +8,23 @@ import android.widget.EditText
 import com.sun.android.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
-    val binding by lazy {ActivitySecondBinding.inflate(layoutInflater)}
+    val binding by lazy { ActivitySecondBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         val actionBar = getSupportActionBar()
         actionBar?.setDisplayHomeAsUpEnabled(true)
-        val receivedMsg = binding.textMessage
         val value: Bundle = intent.extras!!
         val msg: String = value.getString("msg").toString()
-        receivedMsg.text = msg
+        binding.textMessage.text = msg
     }
 
     fun returnReply(view: View?) {
-        val mReply = findViewById<EditText>(R.id.editText_second);
-        val reply: String = "${mReply?.text}"
+
+        val reply: String = "${binding.editTextSecond.text}"
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("msgBack", reply)
-        mReply.text = null
+        binding.editTextSecond.text = null
         setResult(RESULT_OK, intent)
         finish()
     }
