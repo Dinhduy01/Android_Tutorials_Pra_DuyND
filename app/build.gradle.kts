@@ -3,7 +3,6 @@ plugins {
     kotlin(Plugins.kotlin_android)
     id(Plugins.detekt).version(Versions.detekt)
 
-
     jacoco
 }
 
@@ -181,7 +180,7 @@ dependencies {
     implementation ("androidx.core:core-ktx:1.6.0")
     implementation("androidx.appcompat:appcompat:1.4.1")
     implementation( "androidx.fragment:fragment-ktx:1.2.5")
-
+    implementation ("com.wdullaer:materialdatetimepicker:4.2.3")
     testImplementation(Deps.junit)
     testImplementation(Deps.mockk)
 }
