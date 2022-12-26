@@ -18,7 +18,6 @@ class SimpleFragment : Fragment(com.sun.android.R.layout.fragment_simple) {
     private var simpleFragment: FragmentSimpleBinding? = null
     private val binding get() = simpleFragment!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,6 +46,14 @@ class SimpleFragment : Fragment(com.sun.android.R.layout.fragment_simple) {
         }
 
         return binding.root
+    }
+
+    fun newInstance(): SimpleFragment{
+        val args = Bundle()
+
+        val fragment = SimpleFragment()
+        fragment.arguments = args
+        return fragment
     }
 
 
