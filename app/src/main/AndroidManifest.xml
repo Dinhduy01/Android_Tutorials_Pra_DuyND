@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Structure_Android">
         <activity
+            android:name=".bai3_Fragment.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Bai2.MainActivity"
             android:exported="false">
             <meta-data
@@ -32,7 +39,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".bai3_Fragment.MainActivity"
+            android:name=".bai4_Drawable.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
