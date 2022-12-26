@@ -1,4 +1,4 @@
-package com.sun.android
+package com.sun.android.Bai1
 
 import android.app.Activity
 import android.content.Intent
@@ -30,11 +30,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun launchSecondActivity(view: View?) {
-        val intent = Intent(this, SecondActivity::class.java)
-        val txtMsg: String = "${binding.editTextMain?.text}"
-        intent.putExtra("msg", txtMsg)
-        binding.editTextMain.text= null
-        startForResult.launch(intent)
+//        val intent = Intent(this, SecondActivity::class.java)
+////        val txtMsg: String = "${binding.editTextMain?.text}"
+////        intent.putExtra("msg", txtMsg)
+////        binding.editTextMain.text= null
+////        startForResult.launch(intent)
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
+            type = "text/plain"
+        }
+
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        startActivity(shareIntent)
     }
 
 
