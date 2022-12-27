@@ -1,5 +1,5 @@
 <resources>
-    <string name="name">Two Activities</string>
+    <string name="name">App by Dinh Duy</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title1">Cry for a Shadow</string>
@@ -89,6 +89,48 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="bai4">Bài 4</string>
     <string name="bai5">Bài 5</string>
     <string name="bai6">Bài 6</string>
+    <string name="bai7">Bài 7</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="intro_text">Droid Desserts</string>
+    <string name="donuts">Donuts are glazed and sprinkled with candy.</string>
+    <string name="ice_cream_sandwiches">Ice cream sandwiches have chocolate
+        wafers and vanilla filling.</string>
+    <string name="froyo">FroYo is premium self-serve frozen yogurt.</string>
+    <string name="donut_order_message">You ordered a donut.</string>
+    <string name="ice_cream_order_message">You ordered an ice cream
+        sandwich.</string>
+    <string name="froyo_order_message">You ordered a FroYo.</string>
+    <string name="change_dessert">Change dessert</string>
+    <string name="order_label_text">Order:</string>
+    <string name="note_label_text">Note:</string>
+    <string name="name_label_text">Name</string>
+    <string name="enter_name_hint">Enter your name</string>
+    <string name="address_label_text">Address</string>
+    <string name="enter_address_hint">Enter address</string>
+    <string name="phone_label_string">Phone</string>
+    <string name="enter_phone_hint">Enter phone</string>
+    <string name="enter_note_hint">Enter note</string>
+    <string name="choose_delivery_method">Choose a delivery method:</string>
+    <string name="same_day_messenger_service">Same day messenger
+        service</string>
+    <string name="next_day_ground_delivery">Next day ground delivery</string>
+    <string name="pick_up">Pick up</string>
+
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="tab_1">These are the top stories:</string>
+    <string name="tab_2">Tech news you can use:</string>
+    <string name="tab_3">Cooking tips:</string>
+    <string name="tab_label1">Top Stories</string>
+    <string name="tab_label2">Tech News</string>
+    <string name="tab_label3">Cooking</string>
 
 
 </resources>
