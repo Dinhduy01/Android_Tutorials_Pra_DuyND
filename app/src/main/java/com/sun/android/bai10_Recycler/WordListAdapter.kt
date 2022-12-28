@@ -46,7 +46,7 @@ class WordListAdapter :
         }
 
         fun bind(text: String) {
-           binding.word.text = text
+           binding.textViewItem.text = text
         }
 
         override fun onClick(p0: View?) {

@@ -3,7 +3,6 @@ plugins {
     kotlin(Plugins.kotlin_android)
     id(Plugins.detekt).version(Versions.detekt)
 
-
     jacoco
 }
 
@@ -190,6 +189,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
     implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0")
     testImplementation(Deps.junit)
     testImplementation(Deps.mockk)
 }
