@@ -2,6 +2,8 @@ plugins {
     id(Plugins.android_application)
     kotlin(Plugins.kotlin_android)
     id(Plugins.detekt).version(Versions.detekt)
+
+
     jacoco
 }
 
@@ -184,6 +186,10 @@ dependencies {
     implementation ("com.android.support:appcompat-v7:26.1.0")
     implementation ("com.android.support.constraint:constraint-layout:1.0.2")
     implementation ("com.android.support:design:26.1.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
     testImplementation(Deps.junit)
     testImplementation(Deps.mockk)
 }
