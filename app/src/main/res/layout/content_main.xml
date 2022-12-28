@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_main7"
     >
     <TextView
-        android:id="@+id/textintro"
+        android:id="@+id/textintro_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/donut"
+        android:id="@+id/donut_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
@@ -30,11 +30,11 @@
         android:contentDescription="@string/donuts"
         android:onClick="showDonutOrder"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textintro"
+        app:layout_constraintTop_toBottomOf="@+id/textintro_textView"
         app:srcCompat="@drawable/donut_circle" />
 
     <ImageView
-        android:id="@+id/ice_cream"
+        android:id="@+id/ice_cream_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
@@ -43,11 +43,11 @@
         android:contentDescription="@string/ice_cream_sandwiches"
         android:onClick="showIceCreamOrder"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donut"
+        app:layout_constraintTop_toBottomOf="@+id/donut_imageView"
         app:srcCompat="@drawable/icecream_circle" />
 
     <ImageView
-        android:id="@+id/froyo"
+        android:id="@+id/froyo_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
@@ -56,11 +56,11 @@
         android:contentDescription="@string/froyo"
         android:onClick="showFroyoOrder"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ice_cream"
+        app:layout_constraintTop_toBottomOf="@+id/ice_cream_imageView"
         app:srcCompat="@drawable/froyo_circle" />
 
     <TextView
-        android:id="@+id/donut_description"
+        android:id="@+id/donut_description_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -68,11 +68,11 @@
         android:layout_marginTop="24dp"
         android:text="@string/donuts"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/donut"
-        app:layout_constraintTop_toTopOf="@+id/donut" />
+        app:layout_constraintStart_toEndOf="@+id/donut_imageView"
+        app:layout_constraintTop_toTopOf="@+id/donut_imageView" />
 
     <TextView
-        android:id="@+id/ice_cream_description"
+        android:id="@+id/ice_cream_description_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -80,11 +80,11 @@
         android:layout_marginTop="24dp"
         android:text="@string/ice_cream_sandwiches"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ice_cream"
-        app:layout_constraintTop_toTopOf="@+id/ice_cream" />
+        app:layout_constraintStart_toEndOf="@+id/ice_cream_imageView"
+        app:layout_constraintTop_toTopOf="@+id/ice_cream_imageView" />
 
     <TextView
-        android:id="@+id/froyo_description"
+        android:id="@+id/froyo_description_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -92,7 +92,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/froyo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/froyo"
-        app:layout_constraintTop_toTopOf="@+id/froyo" />
+        app:layout_constraintStart_toEndOf="@+id/froyo_imageView"
+        app:layout_constraintTop_toTopOf="@+id/froyo_imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
