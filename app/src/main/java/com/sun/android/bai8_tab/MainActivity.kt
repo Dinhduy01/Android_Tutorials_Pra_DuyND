@@ -14,13 +14,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        val tabLayout = findViewById<TabLayout>(com.sun.android.R.id.tab_layout)
-        // Set the text for each tab.
-        // Set the text for each tab.
-        tabLayout.addTab(tabLayout.newTab().setText(com.sun.android.R.string.tab_label1))
-        tabLayout.addTab(tabLayout.newTab().setText(com.sun.android.R.string.tab_label2))
-        tabLayout.addTab(tabLayout.newTab().setText(com.sun.android.R.string.tab_label3))
-        tabLayout.tabGravity=TabLayout.GRAVITY_FILL
 
         val adapter = ViewPagerAdapter(this)
 

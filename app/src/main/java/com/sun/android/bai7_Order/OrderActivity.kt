@@ -21,9 +21,9 @@ class OrderActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         val message: String? = intent.getStringExtra("MESSAGE")
         binding.orderTextview.text = message
         val spinner = binding.labelSpinner
-        if (spinner != null) {
-            spinner.setOnItemSelectedListener(this)
-        }
+
+        spinner.setOnItemSelectedListener(this)
+
         val adapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(
             this,
             R.array.labels_array,
@@ -32,9 +32,9 @@ class OrderActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         adapter.setDropDownViewResource(
             android.R.layout.simple_spinner_dropdown_item
         )
-        if (spinner != null) {
-            spinner.adapter = adapter;
-        }
+
+        spinner.adapter = adapter;
+
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
