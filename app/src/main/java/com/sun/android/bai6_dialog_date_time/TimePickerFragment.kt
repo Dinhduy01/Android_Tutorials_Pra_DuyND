@@ -10,9 +10,9 @@ import java.util.Calendar
 
 class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener {
     override fun onCreateDialog(saveInstanceState: Bundle?): Dialog {
-        val c: Calendar = Calendar.getInstance()
-        val hour: Int = c.get(Calendar.HOUR_OF_DAY)
-        val minute: Int = c.get(Calendar.MINUTE)
+        val calendar = Calendar.getInstance()
+        val hour: Int = calendar.get(Calendar.HOUR_OF_DAY)
+        val minute: Int = calendar.get(Calendar.MINUTE)
         return TimePickerDialog(requireContext(), this, hour, minute, true)
     }
 

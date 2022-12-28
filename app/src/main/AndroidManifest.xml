@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Structure_Android">
-
+        <activity
+            android:name=".bai9_Navigation.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Bai1.MainActivity"
             android:exported="false"
@@ -84,7 +90,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".bai9_Navigation.MainActivity"
+            android:name=".bai10_Recycler.MainActivity"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

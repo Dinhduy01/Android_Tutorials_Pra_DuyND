@@ -20,6 +20,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        binding.buttonPickTime.setOnClickListener() {
+            showTimePicker()
+        }
+        binding.buttonPickDate.setOnClickListener() {
+            showDatePicker()
+        }
 
     }
 
@@ -48,30 +54,25 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun showDatePicker(view: View) {
+    fun showDatePicker() {
         val newFragment: DialogFragment = DatePickerFragment()
         newFragment.show(supportFragmentManager, getString(R.string.datepicker))
     }
 
-    fun showTimePicker(view: View) {
+    fun showTimePicker() {
         val newFragment: DialogFragment = TimePickerFragment()
         newFragment.show(supportFragmentManager, "timePicker")
     }
 
     fun processDatePickerResult(year: Int, month: Int, day: Int) {
-        val month_string = (month + 1).toString()
-        val day_string = day.toString()
-        val year_string = year.toString()
-        val dateMessage = (day_string + "/" + month_string + "/" + year_string)
+        val dateMessage = getString(R.string.dateMessage, day, month + 1, year)
         Toast.makeText(this, getString(R.string.date) + dateMessage, Toast.LENGTH_LONG).show()
     }
 
     fun processTimePickerResult(hourOfDay: Int, minute: Int) {
-        val hour_string = hourOfDay.toString()
-        val minute_string = minute.toString()
 
-        val timeMessage = (hour_string + ":" + minute_string)
-        Toast.makeText(this, "Time: " + timeMessage, Toast.LENGTH_LONG).show()
+        val timeMessage = getString(R.string.timeMessage, hourOfDay, minute)
+        Toast.makeText(this, "Time: $timeMessage", Toast.LENGTH_LONG).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -88,8 +89,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.night_mode->{
+        when (item.itemId) {
+            R.id.night_mode -> {
                 val nightMode: Int = AppCompatDelegate.getDefaultNightMode()
                 if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -99,28 +100,28 @@ class MainActivity : AppCompatActivity() {
                 }
                 recreate()
             }
-            R.id.bai_2->{
-                val intent = Intent(this,com.sun.android.Bai2.MainActivity::class.java)
+            R.id.bai_2 -> {
+                val intent = Intent(this, com.sun.android.Bai2.MainActivity::class.java)
                 startActivity(intent)
             }
-            R.id.bai_3->{
-                val intent = Intent(this,com.sun.android.bai3_Fragment.MainActivity::class.java)
+            R.id.bai_3 -> {
+                val intent = Intent(this, com.sun.android.bai3_Fragment.MainActivity::class.java)
                 startActivity(intent)
             }
-            R.id.bai_4->{
-                val intent = Intent(this,com.sun.android.bai4_Drawable.MainActivity::class.java)
+            R.id.bai_4 -> {
+                val intent = Intent(this, com.sun.android.bai4_Drawable.MainActivity::class.java)
                 startActivity(intent)
             }
-            R.id.bai_5->{
-                val intent = Intent(this,com.sun.android.bai5_menu.MainActivity::class.java)
+            R.id.bai_5 -> {
+                val intent = Intent(this, com.sun.android.bai5_menu.MainActivity::class.java)
                 startActivity(intent)
             }
-            R.id.bai_6->{
-                val intent = Intent(this,com.sun.android.bai6_dialog_date_time.MainActivity::class.java)
+            R.id.bai_6 -> {
+                val intent = Intent(this, com.sun.android.bai6_dialog_date_time.MainActivity::class.java)
                 startActivity(intent)
             }
-            R.id.bai_7->{
-                val intent = Intent(this,com.sun.android.bai7_Order.MainActivity::class.java)
+            R.id.bai_7 -> {
+                val intent = Intent(this, com.sun.android.bai7_Order.MainActivity::class.java)
                 startActivity(intent)
             }
         }
