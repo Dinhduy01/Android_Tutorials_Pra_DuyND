@@ -10,6 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Structure_Android">
         <activity
+            android:name=".bai5_menu.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".bai4_Drawable.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".bai3_Fragment.MainActivity"
             android:exported="false">
             <meta-data
@@ -39,7 +53,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".bai4_Drawable.MainActivity"
+            android:name=".bai6_dialog_date_time.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

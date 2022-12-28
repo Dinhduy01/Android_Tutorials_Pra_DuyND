@@ -1,62 +1,46 @@
-package com.sun.android.bai4_Drawable
+package com.sun.android.bai5_menu
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.Menu;
-import android.view.MenuItem;
+import android.os.Message
+import android.view.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import com.sun.android.R
-import com.sun.android.databinding.ActivityMain4Binding
+import com.sun.android.databinding.ActivityMain5Binding
 
 class MainActivity : AppCompatActivity() {
-    val binding by lazy { ActivityMain4Binding.inflate(layoutInflater) }
-    private var STATE_SCORE_1: String = "Team 1 Score"
-    private var STATE_SCORE_2: String = "Team 2 Score"
-
-    var mScore1: Int = 0
-    var mScore2: Int = 0
+    val binding by lazy { ActivityMain5Binding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        if (savedInstanceState != null) {
-            mScore1 = savedInstanceState.getInt(STATE_SCORE_1)
-            mScore2 = savedInstanceState.getInt(STATE_SCORE_2)
-            binding.score1.text = mScore1.toString()
-            binding.score2.text = mScore2.toString()
-        }
+        registerForContextMenu(binding.article)
     }
 
-    fun decreaseScore(view: View) {
-        val viewID: Int = view.id
-        when (viewID) {
-            binding.decreaseTeam1.id -> {
-                mScore1--
-                binding.score1.text = mScore1.toString()
-            }
-            binding.decreaseTeam2.id -> {
-                mScore2--
-                binding.score2.text = mScore2.toString()
-
-            }
-        }
+    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        val menuInflater: MenuInflater = getMenuInflater()
+        menuInflater.inflate(R.menu.menu_context, menu)
     }
 
-    fun increaseScore(view: View) {
-        val viewID: Int = view.id
-        when (viewID) {
-            binding.increaseTeam1.id -> {
-                mScore1++
-                binding.score1.text = mScore1.toString()
-
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.context_edit -> {
+                displayToast(getString(R.string.edit_message))
             }
-            binding.increaseTeam2.id -> {
-                mScore2++
-                binding.score2.text = mScore2.toString()
-
+            R.id.context_share -> {
+                displayToast(getString(R.string.share_message))
+            }
+            R.id.context_delete -> {
+                displayToast(getString(R.string.delete_message))
             }
         }
+        return super.onContextItemSelected(item)
+    }
+
+    fun displayToast(message: String) {
+        Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -89,8 +73,8 @@ class MainActivity : AppCompatActivity() {
         } else if (item.itemId == R.id.bai_3) {
             val intent = Intent(this, com.sun.android.bai3_Fragment.MainActivity::class.java)
             startActivity(intent)
-        } else if (item.itemId == R.id.bai_5) {
-            val intent = Intent(this, com.sun.android.bai5_menu.MainActivity::class.java)
+        } else if (item.itemId == R.id.bai_4) {
+            val intent = Intent(this, com.sun.android.bai4_Drawable.MainActivity::class.java)
             startActivity(intent)
         } else if (item.itemId == R.id.bai_6) {
             val intent = Intent(this, com.sun.android.bai6_dialog_date_time.MainActivity::class.java)
@@ -98,13 +82,5 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
-
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putInt(STATE_SCORE_1, mScore1)
-        outState.putInt(STATE_SCORE_2, mScore2)
-    }
-
 }
 

@@ -4,7 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.webkit.URLUtil
+import androidx.appcompat.app.AppCompatDelegate
+import com.sun.android.R
 import com.sun.android.databinding.ActivityMain2Binding
 
 class MainActivity : AppCompatActivity() {
@@ -44,4 +48,45 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        val nightMode: Int = AppCompatDelegate.getDefaultNightMode()
+        if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+            menu.findItem(R.id.night_mode).setTitle(R.string.day_mode)
+        } else {
+            menu.findItem(R.id.night_mode).setTitle(R.string.night_mode)
+        }
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.night_mode) {
+            val nightMode: Int = AppCompatDelegate.getDefaultNightMode()
+            if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            recreate()
+        } else if (item.itemId == R.id.bai_1) {
+            val intent = Intent(this, com.sun.android.Bai1.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_3) {
+            val intent = Intent(this, com.sun.android.bai3_Fragment.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_4) {
+            val intent = Intent(this, com.sun.android.bai4_Drawable.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_5) {
+            val intent = Intent(this, com.sun.android.bai5_menu.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_6) {
+            val intent = Intent(this, com.sun.android.bai6_dialog_date_time.MainActivity::class.java)
+            startActivity(intent)
+        }
+        return true
+    }
 }
+
