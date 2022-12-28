@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
         } else {
             menu.findItem(R.id.night_mode).setTitle(R.string.night_mode)
         }
+        val item: MenuItem = menu.findItem(R.id.bai_1)
+        item.isVisible = false
         return true
     }
 
@@ -84,6 +86,10 @@ class MainActivity : AppCompatActivity() {
         }
         else if(item.itemId == R.id.bai_6){
             val intent = Intent(this,com.sun.android.bai6_dialog_date_time.MainActivity::class.java)
+            startActivity(intent)
+        }
+        else if(item.itemId == R.id.bai_7){
+            val intent = Intent(this,com.sun.android.bai7_Order.MainActivity::class.java)
             startActivity(intent)
         }
         return true

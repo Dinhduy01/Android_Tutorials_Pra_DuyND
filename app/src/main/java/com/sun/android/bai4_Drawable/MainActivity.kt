@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
         if (savedInstanceState != null) {
             mScore1 = savedInstanceState.getInt(STATE_SCORE_1)
             mScore2 = savedInstanceState.getInt(STATE_SCORE_2)
@@ -67,6 +68,8 @@ class MainActivity : AppCompatActivity() {
         } else {
             menu.findItem(R.id.night_mode).setTitle(R.string.night_mode)
         }
+        val item: MenuItem = menu.findItem(R.id.bai_4)
+        item.isVisible = false
         return true
     }
 
@@ -96,6 +99,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, com.sun.android.bai6_dialog_date_time.MainActivity::class.java)
             startActivity(intent)
         }
+        else if(item.itemId == R.id.bai_7){
+            val intent = Intent(this,com.sun.android.bai7_Order.MainActivity::class.java)
+            startActivity(intent)
+        }
         return true
     }
 
@@ -105,6 +112,8 @@ class MainActivity : AppCompatActivity() {
         outState.putInt(STATE_SCORE_1, mScore1)
         outState.putInt(STATE_SCORE_2, mScore2)
     }
+
+
 
 }
 

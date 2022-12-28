@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
     }
 
     fun onClickShowAlert(view: View) {
@@ -83,6 +82,8 @@ class MainActivity : AppCompatActivity() {
         } else {
             menu.findItem(R.id.night_mode).setTitle(R.string.night_mode)
         }
+        val item: MenuItem = menu.findItem(R.id.bai_6)
+        item.isVisible = false
         return true
     }
 
@@ -96,29 +97,27 @@ class MainActivity : AppCompatActivity() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             }
             recreate()
-        }
-        else if(item.itemId == R.id.bai_1){
-            val intent = Intent(this,com.sun.android.Bai1.MainActivity::class.java)
+        } else if (item.itemId == R.id.bai_1) {
+            val intent = Intent(this, com.sun.android.Bai1.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_2) {
+            val intent = Intent(this, com.sun.android.Bai2.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_3) {
+            val intent = Intent(this, com.sun.android.bai3_Fragment.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_4) {
+            val intent = Intent(this, com.sun.android.bai4_Drawable.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_5) {
+            val intent = Intent(this, com.sun.android.bai5_menu.MainActivity::class.java)
+            startActivity(intent)
+        } else if (item.itemId == R.id.bai_6) {
+            val intent = Intent(this, com.sun.android.bai6_dialog_date_time.MainActivity::class.java)
             startActivity(intent)
         }
-        else if(item.itemId == R.id.bai_2){
-            val intent = Intent(this,com.sun.android.Bai2.MainActivity::class.java)
-            startActivity(intent)
-        }
-        else if(item.itemId == R.id.bai_3){
-            val intent = Intent(this,com.sun.android.bai3_Fragment.MainActivity::class.java)
-            startActivity(intent)
-        }
-        else if(item.itemId == R.id.bai_4){
-            val intent = Intent(this,com.sun.android.bai4_Drawable.MainActivity::class.java)
-            startActivity(intent)
-        }
-        else if(item.itemId == R.id.bai_5){
-            val intent = Intent(this,com.sun.android.bai5_menu.MainActivity::class.java)
-            startActivity(intent)
-        }
-        else if(item.itemId == R.id.bai_6){
-            val intent = Intent(this,com.sun.android.bai6_dialog_date_time.MainActivity::class.java)
+        else if(item.itemId == R.id.bai_7){
+            val intent = Intent(this,com.sun.android.bai7_Order.MainActivity::class.java)
             startActivity(intent)
         }
         return true

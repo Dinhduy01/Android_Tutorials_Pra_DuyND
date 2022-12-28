@@ -5,26 +5,19 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
-        android:label="Two Activities"
+        android:label="@string/name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Structure_Android">
         <activity
-            android:name=".bai5_menu.MainActivity"
+            android:name=".Bai1.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".bai4_Drawable.MainActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".bai3_Fragment.MainActivity"
+            android:name=".bai7_Order.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -38,7 +31,28 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Bai1.MainActivity"
+            android:name=".bai3_Fragment.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".bai4_Drawable.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".bai5_menu.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".bai6_dialog_date_time.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -46,6 +60,13 @@
         </activity>
         <activity
             android:name=".Bai1.SecondActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".bai7_Order.OrderActivity"
             android:exported="false"
             android:label="Second Activity">
             <meta-data
@@ -53,7 +74,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".bai6_dialog_date_time.MainActivity"
+            android:name=".bai8_tab.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

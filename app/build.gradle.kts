@@ -2,7 +2,6 @@ plugins {
     id(Plugins.android_application)
     kotlin(Plugins.kotlin_android)
     id(Plugins.detekt).version(Versions.detekt)
-
     jacoco
 }
 
@@ -181,6 +180,10 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.4.1")
     implementation( "androidx.fragment:fragment-ktx:1.2.5")
     implementation ("com.wdullaer:materialdatetimepicker:4.2.3")
+    implementation("com.android.support:gridlayout-v7:28.0.0")
+    implementation ("com.android.support:appcompat-v7:26.1.0")
+    implementation ("com.android.support.constraint:constraint-layout:1.0.2")
+    implementation ("com.android.support:design:26.1.0")
     testImplementation(Deps.junit)
     testImplementation(Deps.mockk)
 }
