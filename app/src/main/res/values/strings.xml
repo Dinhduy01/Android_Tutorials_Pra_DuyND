@@ -162,5 +162,10 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="timeMessage">Time: %1$d:%2$d</string>
 
 
+    <string name="ready_to_start">I am ready to start work!</string>
+    <string name="start_task">Start Task</string>
+    <string name="napping">"Napping…"</string>s
+
+
 </resources>
 
