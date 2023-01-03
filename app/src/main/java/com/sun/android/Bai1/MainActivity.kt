@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
     {
         if (it.resultCode == Activity.RESULT_OK) {
-            //  you will get result here in result.data
             val string: String = it?.data?.extras?.get("msgBack").toString()
             binding.textMessageReply.visibility = View.VISIBLE
             binding.textHeaderReply.visibility = View.VISIBLE
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun launchSecondActivity(view: View?) {
+    fun launchSecondActivity() {
         val sendIntent: Intent = Intent().apply {
             action = Intent.ACTION_SEND
             putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
