@@ -167,5 +167,29 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="napping">"Napping…"</string>s
 
 
+
+    <string name="instructions">Enter a book name to find out who wrote the book. </string>
+    <string name="button_text">Search Books</string>
+    <string name="input_hint">Book Title</string>
+
+    <!-- User messages for in-process queries and error results. -->
+    <string name="loading">Loading…</string>
+    <string name="no_results">"No Results Found"</string>
+    <string name="no_search_term">Please enter a search term</string>
+    <string name="no_network">Please check your network connection and try again.</string>
+
+    <string name="power_connected">Power connected!</string>
+    <string name="power_disconnected">Power disconnected!</string>
+    <string name="custom_broadcast_toast">Custom Broadcast Received</string>
+    <string name="send_custom_broadcast">Send Custom Broadcast</string>
+    <string name="receiver_on">Receiver On</string>
+    <string name="receiver_off">Receiver Off</string>
+    <string name="unknown_action">unknown intent action</string>
+    <string name="action_custom_broadcast">.ACTION_CUSTOM_BROADCAST</string>
+
+
+    <string name="no_result">No result</string>
+
+
 </resources>
 
