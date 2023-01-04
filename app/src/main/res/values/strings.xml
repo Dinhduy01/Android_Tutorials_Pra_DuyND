@@ -167,7 +167,6 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="napping">"Napping…"</string>s
 
 
-
     <string name="instructions">Enter a book name to find out who wrote the book. </string>
     <string name="button_text">Search Books</string>
     <string name="input_hint">Book Title</string>
@@ -189,8 +188,13 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
 
 
     <string name="no_result">No result</string>
-
-
+    <string name="blue_button">Blue</string>
+    <string name="green_button">Green</string>
+    <string name="red_button">Red</string>
+    <string name="black_button">Black</string>
+    <string name="default_count">0</string>
+    <string name="count_button">Count</string>
+    <string name="reset_button">Reset</string>
 
 
 
