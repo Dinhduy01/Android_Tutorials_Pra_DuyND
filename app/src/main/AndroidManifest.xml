@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
@@ -14,6 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Structure_Android">
+        <activity
+            android:name=".bai15_content.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".bai14_share.MainActivity"
             android:exported="false">
@@ -123,7 +129,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".bai15_content.MainActivity"
+            android:name=".bai16_notify.MainActivity"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
