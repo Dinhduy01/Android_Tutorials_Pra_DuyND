@@ -196,6 +196,16 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="count_button">Count</string>
     <string name="reset_button">Reset</string>
 
+    <string name="notification_title">You\'ve been notified!</string>
+    <string name="notification_text">Biết ông Thương không?</string>
+    <string name="update">Update Notification</string>
+    <string name="notify_me">Notify Me!</string>
+    <string name="update_me">Update Me!</string>
+    <string name="cancel_me">Cancel Me!</string>
+    <string name="notification_updated">Notification Updated!</string>
+    <string name="notification_channel_name">App Notification</string>
+    <string name="notification_channel_description">Notification from Duy</string>
+    <string name="notification_lyric">  Thương cho tấm thân cơ hàn, ngậm ngùi lặng nhìn con đò sang ngang.</string>
 
 </resources>
 
